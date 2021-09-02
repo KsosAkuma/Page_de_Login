@@ -25,10 +25,14 @@ function verif_login(): void
                 'mdp' => trim($_POST['mdp']),
             ];
 
+            // $host = 'localhost';
+            // $dbname = 'id17446129_loginpage';
+            // $password = '%Fc7dZMT}vVm366H';
+            // $username = 'id17446129_dim';
             $host = 'localhost';
-            $dbname = 'id17446129_loginpage';
-            $password = '%Fc7dZMT}vVm366H';
-            $username = 'id17446129_dim';
+            $dbname = 'user_login';
+            $password = '';
+            $username = 'root';
             try {                                                                       // on récupère le contenu de la bdd
                 $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
                 $pdo->setAttribute(
@@ -96,9 +100,9 @@ function verif_inscription(): void
 
                         //après avoir vérfié mail et mot de passe on peut enfin faire quelques choses
                         $host = 'localhost';
-                        $dbname = 'id17446129_loginpage';
-                        $password = '%Fc7dZMT}vVm366H';
-                        $username = 'id17446129_dim';
+                        $dbname = 'user_login';
+                        $password = '';
+                        $username = 'root';
                         $data = [
                             'mail' => $_POST['mail'],
                             'mdp' => password_hash($_POST['mdp'], PASSWORD_DEFAULT)

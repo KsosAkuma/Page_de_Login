@@ -1,6 +1,7 @@
 <?php
 // require_once 'fonction.php';
 require_once 'login_verif.php';
+require_once 'voiture.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -15,6 +16,12 @@ session_start();
 </head>
 
 <body>
+    <div>
+        <?php
+        $voitureDao = new Voiture;
+        var_dump($voitureDao->findALL());
+        ?>
+    </div>
     <div>
         <span><a href="deconnection.php"></a></span>
         <?php
